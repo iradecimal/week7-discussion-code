@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "179162495514",
+    "project_id": "cmsc-23-todo-app-iggesmundo",
+    "storage_bucket": "cmsc-23-todo-app-iggesmundo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179162495514:android:310085d75fb9ab61a3efa3",
+        "android_client_info": {
+          "package_name": "com.example.week7_networking_discussion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179162495514-8mho7pbsar2p5ulkpn0qo28gctbv5k38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUBzGVqWbSkpo7leiEaiohSrWEo3FVvMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179162495514-8mho7pbsar2p5ulkpn0qo28gctbv5k38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
