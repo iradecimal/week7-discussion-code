@@ -34,11 +34,10 @@ class Todo {
   }
 
   Map<String, dynamic> toJson(Todo todo) {
-  return {
-    'userId': todo.userId,
-    'title': todo.title,
-    'completed': todo.completed,
-  };
-}
-
+    return {
+      'userId': todo.userId,
+      'title': todo.title,
+      'completed': todo.completed,
+    };
+  }
 }

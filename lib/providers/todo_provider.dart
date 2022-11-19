@@ -10,7 +10,6 @@ import 'package:week7_networking_discussion/models/todo_model.dart';
 import 'package:week7_networking_discussion/api/firebase_todo_api.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 class TodoListProvider with ChangeNotifier {
   late FirebaseTodoAPI firebaseService;
   late Stream<QuerySnapshot> _todosStream;
@@ -29,7 +28,6 @@ class TodoListProvider with ChangeNotifier {
     _selectedTodo = item;
   }
 
-
   fetchTodos() {
     _todosStream = firebaseService.getAllTodos();
     notifyListeners();
@@ -41,9 +39,10 @@ class TodoListProvider with ChangeNotifier {
     notifyListeners();
   }
 
-
-  void editTodo(int index, String newTitle) {
-    /* _todoList[index].title = newTitle; */
+  void editTodo(String newString) async {
+    String message =
+        await firebaseService.editTodo(_selectedTodo!.id, newString);
+    print(message);
     notifyListeners();
   }
 
@@ -53,8 +52,10 @@ class TodoListProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void toggleStatus(int index, bool status) {
-    /* _todoList[index].completed = status;
-    notifyListeners(); */
+  void toggleStatus(bool status) async {
+    String message =
+        await firebaseService.toggleStatus(_selectedTodo!.id, status);
+    print(message);
+    notifyListeners();
   }
 }
